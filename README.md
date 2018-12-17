@@ -15,7 +15,7 @@ Ex. [bmlt_versions drupal="0"] would not display drupal link.
 
 # MORE INFORMATION
 
-[https://github.com/pjaudiomv/bmlt-versions](https://github.com/pjaudiomv/bmlt-versions)
+[https://github.com/bmlt-enabled/bmlt-versions](https://github.com/bmlt-enabled/bmlt-versions)
 
 # Installation
 
@@ -27,6 +27,10 @@ This section describes how to install the plugin and get it working.
 
 
 # Changelog
+
+= 1.1.5 =
+
+* Changed bmlt drupal module to pull version from github api.
 
 = 1.1.4 =
 
