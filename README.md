@@ -28,6 +28,10 @@ This section describes how to install the plugin and get it working.
 
 # Changelog
 
+= 1.1.6 =
+
+* Fix for drupal version and download link.
+
 = 1.1.5 =
 
 * Added user-agent headers to get request to make github api happy.
