@@ -5,7 +5,7 @@ Plugin URI: https://wordpress.org/plugins/bmlt-versions/
 Description: A simple content generator to display the versions and links of the various BMLT components. Add [bmlt_versions] to a page or a post to generate the list.
 Author: BMLT Authors
 Author URI: https://bmlt.app
-Version: 1.1.6
+Version: 1.1.7
 Install: Drop this directory into the "wp-content/plugins/" directory and activate it.
 */
 /* Disallow direct access to the plugin file */
@@ -104,7 +104,8 @@ if (!class_exists("BmltVersions")) {
             $httpcode = wp_remote_retrieve_response_code($results);
             $response_message = wp_remote_retrieve_response_message($results);
             if ($httpcode != 200 && $httpcode != 302 && $httpcode != 304 && !empty($response_message)) {
-                return 'Problem Connecting to Server!';
+                $returntxt = 'Problem Connecting to Server!' . $httpcode . $response_message;
+                return $returntxt;
             }
             $body = wp_remote_retrieve_body($results);
             $result = json_decode($body, true);
@@ -120,7 +121,8 @@ if (!class_exists("BmltVersions")) {
             $httpcode = wp_remote_retrieve_response_code($results);
             $response_message = wp_remote_retrieve_response_message($results);
             if ($httpcode != 200 && $httpcode != 302 && $httpcode != 304 && !empty($response_message)) {
-                return 'Problem Connecting to Server!';
+                $returntxt = 'Problem Connecting to Server!' . $httpcode . $response_message;
+                return $returntxt;
             }
             $body = wp_remote_retrieve_body($results);
             $lines = explode("\n", $body);
@@ -139,7 +141,8 @@ if (!class_exists("BmltVersions")) {
             $httpcode = wp_remote_retrieve_response_code($results);
             $response_message = wp_remote_retrieve_response_message($results);
             if ($httpcode != 200 && $httpcode != 302 && $httpcode != 304 && !empty($response_message)) {
-                return 'Problem Connecting to Server!';
+                $returntxt = 'Problem Connecting to Server!' . $httpcode . $response_message;
+                return $returntxt;
             }
             $body = wp_remote_retrieve_body($results);
             $result = json_decode($body, true);
