@@ -56,7 +56,7 @@ if (!class_exists("BmltVersions")) {
             if ($root_server) {
                 $content .= '<li class="bmlt_versions_li_root">';
                 $rootServer_version = $this->githubLatestReleaseVersion('bmlt-root-server');
-                $content .= '<a href ="https://github.com/bmlt-enabled/bmlt-root-server/releases/download/' . $rootServer_version . '/bmlt-root-server.zip">Root Server (zip file) - ' . $rootServer_version . '</a>';
+                $content .= '<a href ="https://github.com/bmlt-enabled/bmlt-server/releases/download/' . $rootServer_version . '/bmlt-server.zip">BMLT Server (zip file) - ' . $rootServer_version . '</a>';
                 $content .= '</li>';
             }
             if ($wordpress) {
